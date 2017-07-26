@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SMS-Gateway</string>
+    <string name="title_text">Hasura SMS Gateway</string>
+    <string name="link_to_signin">Have an account? Sign in instead</string>
+    <string name="signup_button">Sign up</string>
+    <string name="signup_message">Please sign up.</string>
+    <string name="login_button">Log in</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="please_login">Please Login.</string>
 </resources>
