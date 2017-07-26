@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -53,6 +54,8 @@ public class HomeScreen extends AppCompatActivity {
 
         final String device_id = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
+        TextView dev_id = (TextView) findViewById(R.id.log);
+        dev_id.setText("Device ID: "+device_id);
 
         final HasuraClient client = Hasura.getClient();
         HasuraUser user = client.getUser();
@@ -108,7 +111,7 @@ public class HomeScreen extends AppCompatActivity {
 
                 }
                 catch (Exception e) {
-                    // TODO: handle exception
+                    Toast.makeText(HomeScreen.this, e.toString(), Toast.LENGTH_SHORT).show();
                 }
 
             }
